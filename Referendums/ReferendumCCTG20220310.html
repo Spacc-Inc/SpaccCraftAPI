@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Referendum SpaccCraft</title>
+	<script src="../Whirlpool.js"></script>
+	<script src="../API.js"></script>
+	<link rel="stylesheet" href="ReferendumCCTG20220310.css">
+</head>
+
+<body>
+	<section class="section">
+		<div class="container">
+			<div class="box">
+				<div class="column">
+					<h2 class="title">Referendum Creative Commons per SpaccCraft</h2>
+
+					<form id="PollForm" action="/API" method="POST">
+						<input type="hidden" name="Type" value="Poll"></input>
+						<input type="hidden" name="Ref" value="ReferendumCCTG20220310"></input>
+
+						<p class="subtitle">Dovrebbe tutto il contenuto, passato e futuro, scritto da chiunque,
+							presente sul <a href="https://t.me/SpaccCraft">canale Telegram @SpaccCraft</a>,
+							essere esplicitamente rilasciato sotto licenza <a
+								href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0?</a></p>
+
+						<input class="radio" type="radio" name="Vote" value="Si"><b>✅️ Si</b></input>
+						<input class="radio mb-4" type="radio" name="Vote" value="No"><b>❌️ No</b></input>
+				</div>
+			</div>
+			<div class="box">
+				<div class="column">
+					<form class="box">
+						<div class="field">
+
+							<label class="label">Autenticati con i dati con cui accedi sul server SpaccCraft
+								(Username e Password)</label>
+							<div class="control">
+								<input class="input mb-4" type="text" name="User" placeholder="Username di Minecraft">
+								<input class="input" type="password" name="Pass" placeholder="Password del server"
+									required></input>
+							</div>
+						</div>
+					</form>
+					<br><button class="button is-link" onClick="SubmitPoll()">
+						<h2>Vota!</h2>
+					</button>
+					</form>
+				</div>
+			</div>
+</body>
+
+</html>
