@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.8
 """ ================================= |
 | SpaccCraftAPI                       |
 | Licensed under AGPLv3 by OctoSpacc  |
@@ -52,7 +52,10 @@ def HandlePost(Req):
 		return "Dati di accesso Errati, ricontrolla Username e Password!"
 
 	if Data['Type'] == 'Poll':
-		return SubmitPoll(Data['Ref'], Data['User'].lower(), Data['Vote'])
+		Vote = Data['Vote']
+		if Vote == 'CustomText':
+			Vote = Data['CustomText']
+		return SubmitPoll(Data['Ref'], Data['User'].lower(), Vote)
 
 @app.route('/Referendum/SpaccCraft-Video-Storia-20220415.html')
 def SpaccCraftVideoStoria20220415():

@@ -18,7 +18,8 @@ function SubmitPoll() {
 		"Ref": Form.elements["Ref"].value,
 		"User": Form.elements["User"].value,
 		"Pass": Pass,
-		"Vote": Form.elements["Vote"].value
+		"Vote": Form.elements["Vote"].value,
+		"CustomText": Form.elements["CustomText"].value
 	}
 
 	let Req = new XMLHttpRequest();
