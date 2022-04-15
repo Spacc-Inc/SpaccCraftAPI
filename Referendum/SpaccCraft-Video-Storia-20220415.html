@@ -4,10 +4,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Referendum SpaccCraft</title>
+	<title>Voto SpaccCraft</title>
 	<script src="../Whirlpool.js"></script>
 	<script src="../API.js"></script>
-	<link rel="stylesheet" href="ReferendumCCTG20220310.css">
+	<link rel="stylesheet" href="../Style.css">
 </head>
 
 <body>
@@ -15,19 +15,23 @@
 		<div class="container">
 			<div class="box">
 				<div class="column">
-					<h2 class="title">Referendum Creative Commons per SpaccCraft</h2>
+					<h2 class="title">Voto per il primo video di Storia di SpaccCraft</h2>
 
 					<form id="PollForm" action="/API" method="POST">
 						<input type="hidden" name="Type" value="Poll"></input>
 						<input type="hidden" name="Ref" value="ReferendumCCTG20220310"></input>
 
-						<p class="subtitle">Dovrebbe tutto il contenuto, passato e futuro, scritto da chiunque,
-							presente sul <a href="https://t.me/SpaccCraft">canale Telegram @SpaccCraft</a>,
-							essere esplicitamente rilasciato sotto licenza <a
-								href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0?</a></p>
+						<p class="subtitle">
+							Quale argomento dovrebbe affrontare il primissimo video di storia della SpaccCraft?
+						</p>
 
-						<input class="radio" type="radio" name="Vote" value="Si"><b>✅️ Si</b></input>
-						<input class="radio mb-4" type="radio" name="Vote" value="No"><b>❌️ No</b></input>
+						<input class="radio" type="radio" name="Vote" value="SpaccInc"><b> Spacc Inc.</b></input><br>
+						<input class="radio" type="radio" name="Vote" value="BaseSoctterranei"><b> Base e soctterranei</b></input><br>
+						<input class="radio" type="radio" name="Vote" value="Fosso"><b> Fosso</b></input><br>
+						<input class="radio" type="radio" name="Vote" value="ColleForlong"><b> Colle Forlong</b></input><br>
+						<input class="radio" type="radio" name="Vote" value="Metropolitana"><b> Metropolitana</b></input><br>
+						<b>Altro: </b><input class="textbox" type="textbox" name="Vote"></input><br>
+						
 				</div>
 			</div>
 			<div class="box">

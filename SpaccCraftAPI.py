@@ -54,14 +54,18 @@ def HandlePost(Req):
 	if Data['Type'] == 'Poll':
 		return SubmitPoll(Data['Ref'], Data['User'].lower(), Data['Vote'])
 
-@app.route('/ReferendumCCTG20220310.html')
-def ReferendumCCTG20220310():
-	return send_file('ReferendumCCTG20220310.html')
+@app.route('/Referendum/SpaccCraft-Video-Storia-20220415.html')
+def SpaccCraftVideoStoria20220415():
+	return send_file('Referendum/SpaccCraft-Video-Storia-20220415.html')
 
 @app.route('/API', methods=['POST'])
 def index():
 	if request.method == 'POST':
 		return HandlePost(request)
+
+@app.route('/Style.css')
+def SendCSS():
+	return send_file('Style.css')
 
 @app.route('/API.js')
 def SendJS():
